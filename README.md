@@ -5,10 +5,10 @@ Simple tool to push INSERT, UPDATE and DELETE events from a MySQL Binlog to a Re
 The events will be LPUSHed to Redis key "database_events" as a JSON:
 ```json
 {
-  "event_type": EXT_WRITE_ROWS|EXT_UPDATE_ROWS|EXT_DELETE_ROWS,
+  "event_type": "EXT_WRITE_ROWS|EXT_UPDATE_ROWS|EXT_DELETE_ROWS",
   "table_name": "some_table",
   "database_name": "some_database",
-  "rows": [ affected rows - see bellow ]
+  "rows": "[ affected rows - see bellow ]"
 }
 ```
 
