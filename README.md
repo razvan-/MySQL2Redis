@@ -18,6 +18,12 @@ For WRITE & DELETE events the rows will be an Array of Arrays containing one or 
 
 For UPDATE events, the rows will be an Array of Key-Value pairs representing the affected rows. Inside the "key" field you will find the contents of the row pre-UPDATE and in the "value" field the post-UPDATE values. Sorry for the bad naming.
 
+### What do I use it for?
+Mostly for extracting things that are implemented as callbacks thus allowing my service to not have to know about the existence of other services/workers if it doesn't need to.
+Examples:
+  1. Cache invalidation (not using it now but would apply to Varnish)
+  2. Solr Synchronization (I actually have some business logic in my documents so a simple DIH wouldn't be enough)
+
 ### Preparing the database
 Your database needs to have
   1. ROW based replication enabled
