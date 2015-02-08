@@ -16,7 +16,7 @@ The affected rows will have two forms depending on the event_type.
 
 For WRITE & DELETE events the rows will be an Array of Arrays containing one or more affected rows with the content of all the fields in the table in the order they are in the database.
 
-For UPDATE events, the rows will be an Array of Key-Value Paris representing the affected rows. Inside the "key" field you will find the contents of the row pre-UPDATE and in the "value" field the post-UPDATE values. Sorry for the bad naming.
+For UPDATE events, the rows will be an Array of Key-Value pairs representing the affected rows. Inside the "key" field you will find the contents of the row pre-UPDATE and in the "value" field the post-UPDATE values. Sorry for the bad naming.
 
 ### Preparing the database
 Your database needs to have
@@ -39,7 +39,7 @@ docker run \
   itnovate/mysql2redis
 ```
 
-The docker instance has a local redis running but you can override if you need to.
+The docker instance has a local redis running but you can override it if you need to.
 
 ### Version
 barely 0.0.1-alpha
